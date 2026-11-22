@@ -14,9 +14,9 @@
     "db:reset": "tsx src/db/reset.ts && drizzle-kit migrate && tsx src/db/seed.ts",
     "db:studio": "drizzle-kit studio",
     "db:verificar": "tsx src/db/verificar.ts",
-    "db:migrate:prod": "dotenv -e .env.produccion -- drizzle-kit migrate",
-    "db:seed:prod": "dotenv -e .env.produccion -- tsx src/db/seed.ts",
-    "db:verificar:prod": "dotenv -e .env.produccion -- tsx src/db/verificar.ts"
+    "db:migrate:prod": "node --env-file=.env.produccion node_modules/drizzle-kit/bin.cjs migrate",
+    "db:seed:prod": "tsx --env-file=.env.produccion src/db/seed.ts",
+    "db:verificar:prod": "tsx --env-file=.env.produccion src/db/verificar.ts"
   },
   "dependencies": {
     "@libsql/client": "0.18.0",
@@ -44,7 +44,6 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "dotenv": "^18.0.10",
-    "dotenv-cli": "^11.1.0",
     "drizzle-kit": "0.31.11",
     "eslint": "^9",
     "eslint-config-next": "16.4.6",

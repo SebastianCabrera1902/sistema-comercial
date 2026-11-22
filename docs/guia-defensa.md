@@ -395,7 +395,7 @@ en `.gitignore`.
 
 **¿Cómo se crearon las tablas en Turso?**
 → Con las mismas migraciones de `drizzle/`, apuntando a Turso: `pnpm run db:migrate:prod`. Ese comando
-lee `.env.produccion` (con `dotenv-cli`) y corre `drizzle-kit migrate`. Los datos se cargaron con
+lee `.env.produccion` con la opción `--env-file` de Node y corre `drizzle-kit migrate`. Los datos se cargaron con
 `pnpm run db:seed:prod`.
 
 **¿Cómo se comprueba que el sitio publicado usa Turso y no una base local?**
