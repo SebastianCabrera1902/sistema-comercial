@@ -11,7 +11,9 @@ factura ventas, controla las existencias del catálogo y lleva la cuenta corrien
 | 64052 | Máximo Isaías Romano |
 | 54652 | Fernando Sebastián Cabrera |
 
-**URL pública:** <https://REEMPLAZAR.vercel.app>
+**URL pública:** <https://sistema-comercial-alpha.vercel.app>
+
+**Repositorio:** <https://github.com/SebastianCabrera1902/sistema-comercial>
 
 ## Funcionalidad
 
