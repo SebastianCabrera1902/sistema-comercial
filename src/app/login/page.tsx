@@ -26,8 +26,16 @@ export default function PaginaLogin() {
         </div>
         <p className="text-sm text-sidebar-foreground/50">Programación IV · TUP 2026</p>
       </section>
-      <section className="flex items-center justify-center p-6">
-        <FormularioLogin />
+      <section className="flex flex-col p-6">
+        <div className="self-end text-right text-xs leading-snug text-muted-foreground">
+          <div className="text-sm font-semibold text-foreground">Grupo 15</div>
+          <div>Juan Ignacio Andina · 63392</div>
+          <div>Máximo Isaías Romano · 64052</div>
+          <div>Fernando Sebastián Cabrera · 54652</div>
+        </div>
+        <div className="flex flex-1 items-center justify-center">
+          <FormularioLogin />
+        </div>
       </section>
     </main>
   );
