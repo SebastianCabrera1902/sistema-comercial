@@ -139,6 +139,10 @@ export function NuevaVenta({ proximoNumero }: { proximoNumero: string }) {
     },
   );
 
+  // Los errores de un renglón llegan como "items.0.cantidad": se muestran junto a la lista.
+  const errorItems =
+    errores.items ?? Object.entries(errores).find(([campo]) => campo.startsWith("items."))?.[1];
+
   function confirmar() {
     const pago =
       forma === "contado"
@@ -243,7 +247,7 @@ export function NuevaVenta({ proximoNumero }: { proximoNumero: string }) {
           <CardContent>
             <Pila>
               <BuscadorProducto ref={buscadorProducto} alElegir={(p) => agregar(p)} />
-              {errores.items && <Texto variante="error">{errores.items}</Texto>}
+              {errorItems && <Texto variante="error">{errorItems}</Texto>}
               {renglones.length === 0 ? (
                 <EstadoVacio titulo="Todavía no agregaste productos" />
               ) : (
